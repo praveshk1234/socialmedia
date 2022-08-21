@@ -20,7 +20,8 @@ def likepost(request,pk):
         post.likes.add(request.user.profile)
         liked=True
     return redirect("/")
-
+    
+@login_required(login_url='login')
 def profileupdate(request,pk):
   
     form=ProfileForm(instance=request.user.profile)
