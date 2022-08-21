@@ -1,0 +1,51 @@
+{% extends 'index.html' %} {% load static %} {% block postcontent %}
+<section>
+  <div class="container">
+    <div class="content">
+      <div class="posts">
+        <div class="postfield">
+          <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="captions">{{form.caption}}</div>
+            <div class="inputfile">
+              {{form.post_img}}
+
+              <button type="submit">Post</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="content">
+      {% for post in posts %}
+      <div class="post">
+        <img src="{{ post.imageURL}}" alt="post_img" />
+        <div class="texttype"><p>{{post.caption}}</p></div>
+
+        <form method="POST" action="{% url 'likepost' post.pk %}">
+          {% csrf_token %}
+          <div class="postdetail">
+            {% if request.user.profile in post.likes.all %}
+            <span><button class="like_btn" type="submit" name="post_id" value="{{post.id}}">Unlike</button> {% else %}</span>
+            <span><button class="like_btn" type="submit" name="post_id" value="{{post.id}}">Like</button></span>
+
+            {% endif %}
+            <p class="texttype">{{post.likeCount}} Likes</p>
+          </div>
+        </form>
+
+        <div class="postdetail">
+          <p class="date">{{post.created_at}}</p>
+          <p class="author">{{ post.profile.firstname}}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock postcontent %}

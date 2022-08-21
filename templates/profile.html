@@ -1,0 +1,46 @@
+{% extends 'index.html' %} {% block postcontent %} {% if request.user.is_authenticated %}
+<section class="section-1">
+  <div class="container">
+    <div class="row">
+      <div class="profile">
+        <img src="{{ profile.imageURL }}" alt="profileimg" />
+        <div class="name"><p>{{ profile.firstname}}</p></div>
+        <div class="email"><p>{{profile.email}}</p></div>
+        <div class="dob"><p>{{profile.dob}}</p></div>
+        <div><a class="nav_link" href="{% url 'profileupdate' profile.pk %}">Profile update</a></div>
+      </div>
+      <div class="all_users">
+        <div class="counts">
+          <p>Following :{{followcount}}</p>
+        </div>
+        {% for followto in followto %}
+        <div class="follower"><p>{{ followto.followed_to.firstname}}</p></div>
+        {% endfor %}
+      </div>
+      <div class="all_users">
+        <h3>ALL Users</h3>
+        {% for profile in other_profiles %}
+        <div class="user">
+          <a href="{% url 'get_profile' profile.firstname %}">{{profile.firstname}}</a>
+        </div>
+
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <h2>Your Posts</h2>
+    <div class="userposts">
+      {% for mypost in profile.post_set.all %}
+
+      <div class="contentbox">
+        <img src="{{mypost.imageURL}}" alt="" />
+        <div class="caption"><p>{{mypost.caption}}</p></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %} {% endblock postcontent %}

@@ -1,0 +1,24 @@
+{% extends 'index.html' %} {% load static %} {% block postcontent %}
+<section>
+  <div class="profileuser">
+    <div class="content__field">
+      <img src="{{ profileObj.imageURL }}" alt="iamge" />
+      <div class="profiledetail">
+        <div><h3>{{profileObj.firstname}}</h3></div>
+
+        <div>
+          <p>{{profileObj.dob}}</p>
+        </div>
+        <div><p>{{profileObj.email}}</p></div>
+        <div class="followbtn">
+          <form action="." method="POST">
+            {% csrf_token %}
+            <button type="submit" name="follow" value="{{profileObj.firstname}}">{% if button_value %} Unfollow {% else %} Follow {% endif %}</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock postcontent %}

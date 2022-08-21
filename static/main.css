@@ -1,0 +1,214 @@
+body {
+  font-size: 10px;
+  margin: 0;
+  background-color: azure;
+}
+h2 {
+  text-align: center;
+}
+.nav {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1 1 200px;
+  list-style: none;
+}
+.navbar ul li {
+  margin: 0 3rem;
+  display: flex;
+}
+.nav_link {
+  font-size: 1rem;
+  text-decoration: none;
+  color: blue;
+}
+/* register form */
+.contentform {
+  margin: 4rem 15rem;
+  background-color: white;
+}
+.input {
+  padding: 5px 10px;
+  font-size: 1rem;
+}
+/* home */
+.postfield {
+  width: 500px;
+  background-color: rgb(214, 212, 209);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
+
+.captions {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.captions textarea {
+  margin: 5px 10px;
+  background-color: inherit;
+  height: 50px;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+.inputfile {
+  display: flex;
+  justify-content: space-between;
+}
+.inputfile input {
+  padding: 5px 9px;
+  font-size: 1rem;
+  color: blue;
+}
+.inputfile button {
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+}
+.posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.post {
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+.post img {
+  width: 200px;
+}
+.postdetail {
+  display: flex;
+  justify-content: space-between;
+}
+.like_btn {
+  background-color: rgb(215, 215, 240);
+  padding: 5px 7px;
+  border: none;
+  cursor: pointer;
+}
+.texttype {
+  font-size: 1rem;
+}
+/* profile form */
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.name {
+  font-size: 1rem;
+}
+.email {
+  font-size: 1rem;
+}
+.dob {
+  font-size: 1rem;
+}
+.all_users {
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  flex-direction: column;
+}
+.user {
+  padding: 5px;
+  display: flex;
+}
+.user a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: blue;
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+.profile img {
+  width: 200px;
+}
+.following {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+}
+.follow {
+}
+.counts {
+  font-size: 1rem;
+}
+
+.follower p {
+  font-size: 0.7rem;
+  margin-top: 0rem;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+.userposts {
+  display: flex;
+  justify-content: space-evenly;
+}
+.contentbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 2px 2px 9px -7px black;
+}
+.contentbox img {
+  width: 200px;
+}
+/* profleimgage */
+.profileimg img {
+  width: 100px;
+}
+/* profile user */
+.profileuser {
+  display: flex;
+  justify-content: center;
+}
+.content__field {
+  display: flex;
+  justify-content: flex-start;
+}
+.content__field img {
+  width: 200px;
+}
+.profiledetail {
+  display: flex;
+  flex-direction: column;
+}
+/* Login Register form */
+.formfields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-control {
+  margin: 1rem;
+}
+.form-control input {
+  padding: 4px 6px;
+  font-size: 1rem;
+}
+.btn-primary {
+  padding: 3px 4px;
+  font-size: 1rem;
+  border-radius: 4px;
+  background-color: rgb(129, 129, 218);
+}

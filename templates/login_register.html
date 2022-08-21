@@ -1,0 +1,39 @@
+{% extends 'index.html' %} {% load static %} {% block postcontent %}
+
+<div class="contentform">
+  {% if page == "Register" %}
+
+  <div class="contentfield">
+    <form method="POST">
+      {% csrf_token %}
+      <div class="formfields">
+        <div class="h3">Register</div>
+        {% for field in form %}
+        <div class="form-control">{{field}}</div>
+
+        {% endfor %}
+        <button type="submit" class="btn-primary">Register</button>
+        <div>
+          <p>Have an account Please <a href="{% url 'login' %}">Login</a></p>
+        </div>
+      </div>
+    </form>
+  </div>
+  {% else %}
+  <div class="contentfield">
+    <form method="POST">
+      {% csrf_token %}
+      <div class="formfields">
+        <div class="form-control"><input type="text" placeholder="Enter Username" name="username" /></div>
+        <div class="form-control"><input type="password" placeholder="Enter Password" name="password" /></div>
+        <div><button type="submit" class="btn-primary">Login</button></div>
+        <div>
+          <p>Dont have account <a href="{% url 'register' %}">Register</a></p>
+        </div>
+      </div>
+    </form>
+  </div>
+  {% endif %}
+</div>
+
+{% endblock postcontent%}

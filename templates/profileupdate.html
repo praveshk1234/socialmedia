@@ -1,0 +1,21 @@
+{% extends 'index.html' %} {% block postcontent %}
+<section>
+  <div class="container">
+    <div class="row">
+      <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="profile">
+          <div class="form-control">{{form.firstname.label}} {{form.firstname}}</div>
+
+          <div class="form-control">{{form.dob.label}} {{form.dob}}</div>
+
+          <div class="form-control">{{form.email.label}} {{form.email}}</div>
+          <div>{{form.profile_img}}</div>
+          <button class="btn-primary" type="submit">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+{% endblock postcontent %}

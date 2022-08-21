@@ -1,0 +1,155 @@
+body {
+  font-size: 10px;
+  margin: 0;
+  background-color: azure;
+}
+h2 {
+  text-align: center;
+}
+.nav {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1 1 200px;
+  list-style: none;
+}
+.navbar ul li {
+  margin: 0 3rem;
+  display: flex;
+}
+.nav_link {
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+}
+/* register form */
+.contentform {
+  margin: 4rem 15rem;
+  background-color: white;
+}
+.input {
+  padding: 5px 10px;
+  font-size: 1rem;
+}
+/* home */
+.postfield {
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
+.captions textarea {
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.post {
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+.post img {
+  width: 200px;
+}
+/* profile form */
+.container {
+  background-color: white;
+  margin: 3rem 5rem;
+}
+
+.name {
+  font-size: 1rem;
+}
+.email {
+  font-size: 1rem;
+}
+.dob {
+  font-size: 1rem;
+}
+.all_users {
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+}
+.user {
+  padding: 1rem;
+  display: flex;
+  border: 1px dashed green;
+}
+.user a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: blue;
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+.profile img {
+  width: 200px;
+}
+.following {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+}
+.follow {
+}
+.counts {
+  font-size: 1rem;
+}
+
+.follower p {
+  font-size: 1rem;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+.userposts {
+  display: flex;
+  justify-content: space-evenly;
+}
+.contentbox {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: 2px 2px 9px -7px black;
+}
+.contentbox img {
+  width: 200px;
+}
+/* profleimgage */
+.profileimg img {
+  width: 100px;
+}
+/* profile user */
+.profileuser {
+  display: flex;
+  justify-content: center;
+}
+.content__field {
+  display: flex;
+  justify-content: flex-start;
+}
+.content__field img {
+  width: 200px;
+}
+.profiledetail {
+  display: flex;
+  flex-direction: column;
+}
